@@ -1,10 +1,5 @@
 # eth-gas-reporter
 
-[![npm version](https://badge.fury.io/js/eth-gas-reporter.svg)](https://badge.fury.io/js/eth-gas-reporter)
-[![Build Status](https://travis-ci.org/cgewecke/eth-gas-reporter.svg?branch=master)](https://travis-ci.org/cgewecke/eth-gas-reporter)
-[![Codechecks](https://raw.githubusercontent.com/codechecks/docs/master/images/badges/badge-default.svg?sanitize=true)](https://codechecks.io)
-[![buidler](https://buidler.dev/buidler-plugin-badge.svg?1)](https://github.com/cgewecke/buidler-gas-reporter)
-
 **A Mocha reporter for Ethereum test suites:**
 
 - Gas usage per unit test.
@@ -37,37 +32,14 @@ module.exports = {
 };
 ```
 
-**[Buidler](https://buidler.dev)**
-
-```
-npm install --save-dev buidler-gas-reporter
-```
-
-```javascript
-/* buidler.config.js */
-usePlugin('buidler-gas-reporter');
-
-module.exports = {
-  networks: { ... },
-  gasReporter: { ... } // See options below
-};
-```
+**Buidler was renamed to hardhat**
+Use https://github.com/cgewecke/hardhat-gas-reporter for hardhat
 
 **Other**
 
 This reporter should work with any build platform that uses Mocha and
 connects to an Ethereum client running as a separate process. There's more on advanced use cases
 [here](https://github.com/cgewecke/eth-gas-reporter/blob/master/docs/advanced.md).
-
-### Continuous Integration (Travis and CircleCI)
-
-This reporter comes with a [codechecks](http://codechecks.io) CI integration that
-displays a pull request's gas consumption changes relative to its target branch in the Github UI.
-It's like coveralls for gas. The codechecks service is free for open source and maintained by MakerDao engineer [@krzkaczor](https://github.com/krzkaczor).
-
-Complete [set-up guide here](https://github.com/cgewecke/eth-gas-reporter/blob/master/docs/codechecks.md) (it's easy).
-
-![Screen Shot 2019-06-18 at 12 25 49 PM](https://user-images.githubusercontent.com/7332026/59713894-47298900-91c5-11e9-8083-233572787cfa.png)
 
 ### Options
 
@@ -79,7 +51,7 @@ your own API key [here][55] and set it with the `coinmarketcap` option.
 
 In order to retrieve the gas price of a particular blockchain, you can configure the `token` and `gasPriceApi` (API key rate limit may apply).
 
-**NOTE**: HardhatEVM and ganache-cli implement the Ethereum blockchain. To get accurate gas measurements for other chains you may need to run your tests against development clients developed specifically for those networks. 
+**NOTE**: HardhatEVM and ganache-cli implement the Ethereum blockchain. To get accurate gas measurements for other chains you may need to run your tests against development clients developed specifically for those networks.
 
 | Option            | Type                   | Default                                                                    | Description                                                                                                                                                                                                                                  |
 | ----------------- | ---------------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

@@ -1,5 +1,9 @@
 ## Changelog: eth-gas-reporter
 
+# 0.2.24 / 2022-01-09
+
+- Pin colors to 1.4.0
+
 # 0.2.23 / 2021-11-26
 
 - Add notes to README about missing price data & remote data fetching race condition
